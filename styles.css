@@ -57,12 +57,33 @@ h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* 💡 ලෝගෝ එක කැපෙන්නේ නැති වෙන්න සහ ලස්සනට පේන්න සයිස් එක හැදුවා */
+/* ===================================================
+   🎨 CODE-BASED LOGO STYLES
+   =================================================== */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* අයිකන් එකයි අකුරුයි අතර පරතරය */
+}
+
 #header-img {
-  height: 55px; 
+  height: 38px; /* අයිකන් එකේ උස */
   width: auto;
-  object-fit: contain;
   display: block;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 850;
+  color: #7d2ae8; /* Canva පර්පල් පාට */
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif, Arial;
+}
+
+/* 💡 Master කියන කෑල්ල විතරක් ලස්සන Canva සයන් (Cyan) පාට කරන්න */
+.logo-text span {
+  color: #00c4cc; 
 }
 
 #nav-bar {
@@ -350,6 +371,11 @@ h1 {
    📱 PERFECT RESPONSIVE MEDIA QUERY (Mobile)
    =================================================== */
 @media screen and (max-width: 768px) {
+
+  .logo-text {
+    font-size: 1.10rem; /* මොබයිල් එකේදී ලෝගෝ අකුරු ගානට හැදුවා */
+  }
+  
   #header {
     padding: 0 20px;
   }
