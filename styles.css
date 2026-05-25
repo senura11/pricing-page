@@ -78,7 +78,7 @@ h1 {
    HERO FORM
    =================================================== */
 #form {
-  margin-bottom: 30px;
+  margin-bottom: 55px;
   width: 100%;         
   max-width: 500px;    
   padding: 0 20px;     
@@ -315,6 +315,18 @@ h1 {
    RESPONSIVE MEDIA QUERY (Mobile Version)
    =================================================== */
 @media screen and (max-width: 600px) {
+
+ main {
+    /* 💡 මොබයිල් එකේදී උඩ සහ යට ඉඩ මනරම්ව සමාන මට්ටමක තියාගන්න */
+    padding-top: 40px; 
+  }
+
+  #form {
+    /* 💡 මොබයිල් තිරය කුඩා නිසා යට මාජින් එක 35px දක්වා ඩිංගක් අඩු කළා */
+    margin-bottom: 35px;
+  }
+
+ 
   h1 {
     padding: 0 15px; 
   }
