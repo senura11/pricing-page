@@ -1,355 +1,200 @@
 /* ===================================================
-
    GENERAL STYLES
-
    =================================================== */
+* {
+  box-sizing: border-box;
+}
 
-*{
-  box-sizing:border-box;
+/* 💡 Horizontal Scroll බාර් එක හැම තිස්සෙම හැංගෙන්න උඩටම දැම්මා */
+html, body {
+  overflow-x: hidden;
 }
 
 body {
-
   font-family: Arial, Verdana, sans-serif;
-
   margin: 0; 
-
   background-color: #EEEEEE;
-
   color: #333333;
-}
-
-body{
   scroll-behavior: smooth;
 }
+
 main {
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
   padding-top: 120px; 
-
 }
-
-
 
 h1 {
-
   margin-bottom: 0;
-
-  font-size: clamp(1.8rem, 5vw, 2.8rem);/* Desktop එකේදී සාමාන්‍ය ලොකු සයිස් එක */
-
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   text-align: center;
-
 }
-
-
 
 /* ===================================================
-
    HEADER & NAVIGATION
-
    =================================================== */
-
 #header {
-
   height: auto;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   position: fixed;
-
   top: 0;
-
   width: 100%;
-
   background-color: #EEEEEE; 
-
   padding: 8px 20px; 
-
   box-sizing: border-box;
-
   z-index: 100;
-
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-
 }
-
-
 
 #header-img {
-
   height: 55px; 
-
   width: auto;
-
 }
-
-
 
 #nav-bar {
-
   display: flex;
-
   justify-content: space-evenly;
-
   gap: 5px;
-
 }
-
-
 
 .nav-link {
-
   text-decoration: none;
-
   color: black;
-
   padding: 5px 10px;
-
   font-weight: bold;
-
   transition: color 0.2s;
-
 }
-
-
 
 .nav-link:hover {
-
   color: #00c4cc;
-
 }
-
-
 
 /* ===================================================
-
    HERO FORM
-
    =================================================== */
-
 #form {
   margin-bottom: 30px;
-  width: 100%;         /* 💡 ෆෝම් එක මුළු ස්ක්‍රීන් එකේම පළල ගන්නවා */
-  max-width: 500px;    /* 💡 හැබැයි ඩෙස්ක්ටොප් එකේදී 500px වලට වඩා ලොකු වෙන්න දෙන්නේ නැහැ */
-  padding: 0 20px;     /* දෙපැත්තෙන් පොඩි ඉඩක් */
+  width: 100%;         
+  max-width: 500px;    
+  padding: 0 20px;     
   box-sizing: border-box;
 }
-
-
 
 #email {
   display: block;
-  width: 90%;        /* 💡 මොබයිල් එකේදී තිරයේ පළලින් 90%ක් ගන්නවා (දෙපැත්තෙන් ලස්සනට ඉඩ ඉතුරු වෙනවා) */
+  width: 90%;        
   margin: 15px auto;
-  
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 #email::placeholder {
-  /* සූත්‍රය: clamp(අවම_සයිස් එක, ස්ක්‍රීන්_අනුව_වෙනස්වන_සයිස් එක, උපරිම_සයිස් එක) */
   font-size: clamp(11px, 3.5vw, 16px); 
 }
 
-
 #submit {
-
   display: block;
-
   margin: 10px auto;
-
-  width: 120px;
-
   padding: 10px;
-
   font-weight: 900;
-
   background-color: #ffc107;
-
   border: none;
-
   border-radius: 4px;
-
   cursor: pointer;
-
   transition: background 0.2s;
-  width: 100%;                   /* 💡 මොබයිල් එකේදී ඊමේල් බාර් එක වගේම ස්ක්‍රීන් එකේ හැටියට ඇදෙනවා */
+  width: 100%;                    
   max-width: 120px;
-  padding:clamp(10px,2.5vw,14px);
+  padding: clamp(10px,2.5vw,14px);
   font-size: clamp(13px, 3vw, 16px);
-
 }
-
-
 
 #submit:hover {
-
   background-color: #e0a800;
-
 }
 
-#submit:hover{
-  transform:scale(0.98)
+#submit:hover {
+  transform: scale(0.98);
 }
 
 /* ===================================================
-
    FEATURES SECTION (Grid)
-
    =================================================== */
-
 #features {
-
   max-width: 1100px;
-
   margin: 50px auto;
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 25px;
-
   padding: 0 20px;
-
   justify-items: center;
-
 }
-
-
 
 .feature-box {
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   text-align: center;
-
   background-color: #ffffff;
-
   width: 100%;
-
   max-width: 300px;
-
   padding: 30px 20px;
-
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
   border-radius: 8px;
-
   box-sizing: border-box;
   overflow-wrap: anywhere;
-
 }
-
-
 
 .icon-wrapper i {
-
   color: #7d2ae8; 
-
   margin-bottom: 15px; 
-
 }
-
-
 
 .feature-box h3 {
-
   font-size: 1.2rem;
-
   margin: 10px 0;
-
 }
-
-
 
 /* ===================================================
-
-   VIDEO SECTION (Premium Responsive Player)
-
+   VIDEO SECTION
    =================================================== */
-
 #video-section {
-
   width: 100%;
-
   max-width: 1100px; 
-
   margin: 60px auto;
-
   padding: 0 20px;
-
   display: flex;
-
   justify-content: center;
-
   box-sizing: border-box;
-
 }
-
-
 
 #video {
-
   width: 100%;          
-
   max-width: 850px;     
-
   aspect-ratio: 16 / 9; 
-
   height: auto;         
-
   border-radius: 12px;   
-
   box-shadow: 0 12px 35px rgba(0,0,0,0.18); 
-
   border: none;
-
 }
-
-
 
 /* ===================================================
-
    PRICING SECTION (Flexbox)
-
    =================================================== */
-
 #pricing {
-
   display: flex;
-
   justify-content: center;
-
   align-items: stretch; 
-
   gap: 25px;
-
   margin: 60px auto;
-
   padding: 0 20px;
-   width:100%;
-
+  width: 100%;
   max-width: 1100px;
 }
-
-
 
 .product-card {
   background-color: white;
@@ -358,8 +203,8 @@ h1 {
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 100%;       /* 💡 තිරයේ ප්‍රමාණය කුඩා වුණොත් ඒ ප්‍රමාණයට ඔටෝම හැඩගැසෙන්න */
-  max-width: 300px; /* 💡 හැබැයි උපරිම පළල 280px වලට වඩා ලොකු වෙන්න දෙන්නේ නැහැ */
+  width: 100%;       
+  max-width: 300px; 
   overflow: hidden; 
   padding-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -367,321 +212,179 @@ h1 {
   box-sizing: border-box;
 }
 
-
-
 .product-card:hover {
-
   transform: translateY(-5px); 
-
 }
 
-
-
 .product-card.highlighted {
-
   border: 2px solid #7d2ae8; 
-
   transform: scale(1.05);   
-
   box-shadow: 0 10px 25px rgba(125, 42, 232, 0.15);
-
 }
 
 .product-card.highlighted:hover {
-
   transform: scale(1.05) translateY(-5px);
-
 }
-
-
 
 .level {
-
   width: 100%;
-
   text-align: center;
-
   background-color: #DDDDDD;
-
   padding: 12px 0;
-
   font-weight: bold;
-
   text-transform: uppercase;
-
   font-size: 0.9rem;
-
 }
-
-
 
 .product-card h2 {
-
   font-size: 2rem;
-
   margin: 20px 0 10px 0;
-
 }
-
-
 
 .product-card ul {
-
   list-style: none;
-
   padding: 0;
-
   margin: 0 0 20px 0;
-
   text-align: center;
-
 }
-
-
 
 .product-card ul li {
-
   margin-bottom: 10px;
-
   color: #555;
-
 }
-
-
 
 .btn {
-
   background-color: #ffc107;
-
   border: none;
-
   padding: 10px 20px;
-
   font-weight: bold;
-
   border-radius: 4px;
-
   cursor: pointer;
-
   margin-top: auto; 
-
   transition: background 0.2s;
-
 }
-
-
 
 .btn:hover {
-
   background-color: #e0a800;
-
 }
-
-
 
 /* ===================================================
-
    PREMIUM FOOTER
-
    =================================================== */
-
 #footer {
-
   background-color: #111111; 
-
   color: #ffffff;
-
   padding: 40px 20px;
-
   margin-top: 80px;
-
   width: 100%;
-
   box-sizing: border-box;
-
 }
-
-
 
 .footer-content {
-
   max-width: 1100px;
-
   margin: 0 auto;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 20px;
-
 }
-
-
 
 .footer-info p {
-
   margin: 5px 0;
-
   font-size: 0.9rem;
-
   color: #aaaaaa;
-
 }
-
-
 
 .footer-links a {
-
   color: #aaaaaa;
-
   text-decoration: none;
-
   margin-left: 25px;
-
   font-size: 0.9rem;
-
   transition: color 0.2s;
-
 }
 
-
-
 .footer-links a:hover {
-
   color: #00c4cc; 
-
 }
 
 .open, .close { display: none; }
 
-
 /* ===================================================
-
    RESPONSIVE MEDIA QUERY (Mobile Version)
-
    =================================================== */
-
 @media screen and (max-width: 600px) {
-
-  
-
-  /* 💡 මෙන්න මෙතනට h1 එක දාලා ෆොන්ට් සයිස් එක අඩු කළා මචං */
-
   h1 {
-
-    padding: 0 15px; /* අයිනටම හේත්තු වෙන්නේ නැති වෙන්න පොඩි ඉඩක් */
-
+    padding: 0 15px; 
   }
-
-
 
   #header {
-
     display: flex;
-
-   flex-direction: row;
-
+    flex-direction: row;
     position: static; 
     justify-content: space-between;
-    height:auto;
-   padding: 8px 20px;
+    height: auto;
+    padding: 8px 20px;
   }
 
-  #header img{
-    height: 55px;
+  /* 💡 ID එක `#header-img` කියලා නිවැරදි කළා සහ සිහින් කළා */
+  #header-img {
+    height: auto;
+    max-height: 48px;
+    max-width: 60%;
   }
 
   main {
-
     padding-top: 20px;
-
   }
-
-
 
   #features {
-
     grid-template-columns: 1fr;
-
     gap: 20px;
-
   }
 
-
-
   .feature-box {
-
     width: 100%;
-
     max-width: 320px;
-
   }
 
   .product-card {
-    width:100%;
+    width: 100%;
     max-width: 320px; 
   }
 
-
-
   #video-section {
-
     margin: 40px auto;
-
   }
-
-
 
   #pricing {
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 30px;
-
   }
-
-  
 
   .product-card.highlighted {
-
     transform: scale(1); 
-
   }
-
-
 
   .footer-content {
-
     flex-direction: column;
-
     text-align: center;
-
   }
 
-
-
   .footer-links a {
-
     margin: 5px 15px;
-
   }
 
   .open {
     display: block;
   }
 
-  .close{
-    position:absolute;
-    display:inline-block;
-    top:20px;
-    right:20px;
+  .close {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: 20px;
     background: none;
     border: none;
     font-size: 1.8rem;
@@ -691,7 +394,7 @@ h1 {
     padding: 5px;
   }
 
-#nav-bar {
+  #nav-bar {
     position: fixed;
     top: 0;
     right: 0;
@@ -701,31 +404,28 @@ h1 {
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
-    transition: transform 0.3s ease; /* 💡 මෙනු එක පැත්තක ඉඳන් ලස්සනට ඇදිලා එන්න */
-    z-index: 999; /* 💡 මෙනු එක වෙබ් පේජ් එකේ අනිත් හැමදේටම උඩින් පේන්න */
+    transition: transform 0.3s ease; 
+    z-index: 999; 
   }
 
-
-  #nav-bar.active{
-    transform:translateX(0);
+  #nav-bar.active {
+    transform: translateX(0);
   }
 
-  .nav-link{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    align-items:center;
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
   }
-     }
+}
+
+/* ===================================================
+   VERY SMALL MOBILE QUERY
+   =================================================== */
 @media screen and (max-width: 200px) {
-  #header{
-    display:flex;
-    flex-wrap:wrap;
+  #header {
+    display: flex;
+    flex-wrap: wrap;
   }
-
-  body{
-    overflow-x:hidden;
-  }
-  
-
 }
