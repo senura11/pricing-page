@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* 💡 Horizontal Scroll බාර් එක හැම තිස්සෙම හැංගෙන්න උඩටම දැම්මා */
 html, body {
   overflow-x: hidden;
 }
@@ -27,8 +26,8 @@ main {
 }
 
 h1 {
-  margin-top:20px;
-  margin-bottom:10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   text-align: center;
 }
@@ -101,24 +100,21 @@ h1 {
 #submit {
   display: block;
   margin: 10px auto;
-  padding: 10px;
   font-weight: 900;
   background-color: #ffc107;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
   width: 100%;                    
   max-width: 120px;
-  padding: clamp(10px,2.5vw,14px);
+  padding: clamp(10px, 2.5vw, 14px);
   font-size: clamp(13px, 3vw, 16px);
 }
 
+/* 💡 Hover ස්ටයිල් දෙකම එකට එකතු කළා */
 #submit:hover {
   background-color: #e0a800;
-}
-
-#submit:hover {
   transform: scale(0.98);
 }
 
@@ -316,17 +312,15 @@ h1 {
    =================================================== */
 @media screen and (max-width: 600px) {
 
- main {
-    /* 💡 මොබයිල් එකේදී උඩ සහ යට ඉඩ මනරම්ව සමාන මට්ටමක තියාගන්න */
+  /* 💡 ඩූපිලිකේට් වෙච්ච main Selector දෙක එකතු කරලා 40px padding එක තනිවම ලොක් කළා */
+  main {
     padding-top: 40px; 
   }
 
   #form {
-    /* 💡 මොබයිල් තිරය කුඩා නිසා යට මාජින් එක 35px දක්වා ඩිංගක් අඩු කළා */
     margin-bottom: 35px;
   }
-
- 
+  
   h1 {
     padding: 0 15px; 
   }
@@ -340,15 +334,10 @@ h1 {
     padding: 8px 20px;
   }
 
-  /* 💡 ID එක `#header-img` කියලා නිවැරදි කළා සහ සිහින් කළා */
   #header-img {
     height: auto;
     max-height: 48px;
     max-width: 60%;
-  }
-
-  main {
-    padding-top: 20px;
   }
 
   #features {
