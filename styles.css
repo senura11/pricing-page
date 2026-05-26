@@ -49,7 +49,7 @@ h1 {
   
   animation: 
     typing 4s steps(25) forwards, 
-    blink 0.75s step-end 5 forwards;
+    blink 0.8s step-end 5 forwards;
 }
 
 
@@ -418,7 +418,7 @@ h1 {
   }
 
   .open {
-    display: block; /* මොබයිල් එකේදී විතරක් හම්බර්ගර් මෙනු එක පෙන්වයි */
+    display: block; 
   }
 
   #nav-bar {
