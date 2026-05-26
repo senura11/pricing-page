@@ -27,15 +27,43 @@ main {
 }
 
 h1 {
+  font-family: 'Courier New', Courier, monospace; /* Monospace අනිවාර්යයි */
   font-size: clamp(2rem, 6vw, 3.2rem);
-  font-weight: 800;
-  text-align: center;
+  font-weight: 850;
   color: #0f172a;
-  letter-spacing: -0.03em;
-  margin-bottom: 15px;
-  max-width: 800px;
-  padding: 0 20px;
+  
+  /* ===================================================
+     👑 [CRITICAL FIX] - කර්සර් එක මැදට ගන්න ලොජික් එක
+     =================================================== */
+  display: block;             /* ෂුවර් එකටම block element එකක් කරනවා */
+  margin: 0 auto 20px auto;   /* 💡 Top/Bottom margin, Auto Left/Right -> centers the box */
+  max-width: fit-content;     /* 💡 [මේක තමයි වැදගත්ම] අකුරු තියෙන ටිකට විතරක් width එක සීමා කරනවා */
+  width: 0;                   
+  
+  /* ===================================================
+     ටයිපින් ඉෆෙක්ට් එකට අවශ්‍ය base styles
+     =================================================== */
+  white-space: nowrap;        
+  overflow: hidden;           
+  border-right: 4px solid #7d2ae8; 
+  
+  animation: 
+    typing 4s steps(25) forwards, 
+    blink 0.75s step-end infinite;
 }
+
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #7d2ae8; }
+}
+
 
 /* ===================================================
    👑 PREMIUM FIXED HEADER (Glassmorphic)
@@ -217,11 +245,12 @@ h1 {
   max-width: 900px; 
   margin: 40px auto 80px auto;
   padding: 0 25px;
+
 }
 
 #video {
-  width: 100%;          
-  aspect-ratio: 16 / 9; 
+  width: 100%; 
+  aspect-ratio: 16 / 9;
   height: auto;         
   border-radius: 20px;   
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); 
@@ -371,6 +400,14 @@ h1 {
    📱 PERFECT RESPONSIVE MEDIA QUERY (Mobile)
    =================================================== */
 @media screen and (max-width: 768px) {
+
+  h1 {
+    /* 💡 [MAGIC LINE] - අකුරු 25ම 218px ස්ක්‍රීන් එකේ වුණත් කැපෙන්නේ නැතුව ඔටෝ හැකිලෙන්න මේක දැම්මා */
+    font-size: 6vw !important; 
+    
+    border-right: 3px solid #7d2ae8; /* මොබයිල් එකේදී කර්සර් ඉර ඩිංගක් සිහින් කළා */
+    margin-bottom: 15px;
+  }
 
   .logo-text {
     font-size: 1.10rem; /* මොබයිල් එකේදී ලෝගෝ අකුරු ගානට හැදුවා */
